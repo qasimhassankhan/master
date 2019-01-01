@@ -1,0 +1,136 @@
+/*===================== TABLE OF CONTENT =======================
+1. Fonts
+2. General Styling
+3. Cross Browser Compatibility
+4. Header
+5. Dropdown
+6. Main Slider
+7. Main Tabs
+8. Blog
+9. Pagination
+10. Page TOp
+11. About Me
+12. Sidebar
+13. Contact Page
+14. Footer
+15. Slick Carousel Styling
+
+=============================================================*/
+
+/*=============== Fonts ===================*/
+@import url('https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Rubik:300,300i,400,400i,500,500i,700,700i,900,900i');
+/*=============== General Styling ===================*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License:none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section{display:block}
+body{line-height:1.6}
+blockquote, q{quotes:none}
+blockquote:before, blockquote:after,
+q:before, q:after{
+    content:'';
+    content:none;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+html{overflow-x:hidden}
+body{
+    letter-spacing:0;
+    font-family:'Barlow';
+    overflow-x:hidden;
+}
+body *{outline:none!important}
+h1, h2, h3, h4, h5, h6{
+    color:#191f25;
+    font-family:'rubik';
+}
+p{
+    line-height:1.8;
+}
+a{color:inherit}
+a:hover,
+a:focus{
+    text-decoration:none;
+    outline:none;
+}
+input:hover,input:focus{outline:none}
+section{
+    float:left;
+    position:relative;
+    width:100%;
+}
+ul.theme-list{
+    list-style:outside none none;
+    margin:0 0 30px;
+    padding:0;
+}
+ul.theme-list li{
+    color:#555555;
+    font-size:15px;
+    margin-bottom:15px;
+    padding-left:25px;
+    position:relative;
+}
+ul.theme-list li:before{
+    content:"";
+    height:5px;
+    width:5px;
+    position:absolute;
+    left:0;
+    top:9px;
+}
+i{font-style:italic}
+img{float:left;height:auto}
+:-webkit-input-placeholder,
+:-webkit-textarea-placeholder{opacity:1}
+:-moz-placeholder{opacity:1}
+:-ms-input-placeholder,
+:-ms-textarea-placeholder{opacity:1}
+img{max-width:100%}
+body.theme-body{
+    background-color: #f0f6ff;
+    color: #617182;
+}
+/*=============== Cross Browser Compatibility ===================*/
+a{
+    -webkit-transition:all 0.4s ease-in-out;
+    -moz-transition:all 0.4s ease-in-out;
+    -ms-transition:all 0.4s ease-in-out;
+    -o-transition:all 0.4s ease-in-out;
+    transition:all 0.4s ease-in-out;
+}
+
+{
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    border-radius:50%;
+}
+/*=============== Header ===================*/
