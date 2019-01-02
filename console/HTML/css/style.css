@@ -14,7 +14,6 @@
 13. Contact Page
 14. Footer
 15. Slick Carousel Styling
-
 =============================================================*/
 
 /*=============== Fonts ===================*/
@@ -64,12 +63,12 @@ body{
     letter-spacing:0;
     font-family:'Poppins';
     overflow-x:hidden;
+        font-size: 0.8125rem;
 }
 body *{outline:none!important}
 h1, h2, h3, h4, h5, h6{
     color:#191f25;
 }
-
 a{color:inherit}
 a:hover,
 a:focus{
@@ -110,17 +109,26 @@ img{float:left;height:auto}
 :-ms-input-placeholder,
 :-ms-textarea-placeholder{opacity:1}
 img{max-width:100%}
+strong{font-weight:600}
 body.theme-body{
     background-color: #f0f6ff;
     color: #617182;
 }
+body.theme-body p {
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #6b6d70;
+    margin: 0 0 5px;
+}
 /*=============== Cross Browser Compatibility ===================*/
-a{
-    -webkit-transition:all 0.4s ease-in-out;
-    -moz-transition:all 0.4s ease-in-out;
-    -ms-transition:all 0.4s ease-in-out;
-    -o-transition:all 0.4s ease-in-out;
-    transition:all 0.4s ease-in-out;
+a,
+.dropdown .media{
+    -webkit-transition:all 0.2s ease-in-out;
+    -moz-transition:all 0.2s ease-in-out;
+    -ms-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+    transition:all 0.2s ease-in-out;
 }
 
 {
@@ -172,6 +180,7 @@ h1.brand-text {
     vertical-align: middle;
     margin-left: 6px;
 }
+/*=== Custom Header Links ===*/
 .custom-header-links a.nav-link i {
     font-size: 10px;
     vertical-align: middle;
@@ -183,8 +192,114 @@ h1.brand-text {
     font-weight: 400;
     color: #9eacba;
     font-size: 14px;
+    padding: 5px 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
-
-
-
-
+.custom-header-links li:hover a.nav-link,
+.custom-header-links li.show a.nav-link {
+    background: #f0f6ff;
+    color: #6f91c3;
+}
+/*=== Dropdown ===*/
+.dropdown a.dropdown-item {
+    font-size: 13px;
+    color: #a4b1be;
+}
+ul.top-header-btns{ list-style: none }
+ul.top-header-btns > li { float: left }
+ul.top-header-btns > li > a {
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #617182;
+    line-height: 41px;
+    font-size: 20px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+ul.top-header-btns > li > a:hover{ background:#f0f6ff}
+ul.top-header-btns > li ~ li{ margin-left: 10px }
+ul.top-header-btns > li > a.login-user img {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+a.login-user {
+    border: 2px solid #FFF;
+    margin-left: 20px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
+    -moz-box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
+    box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
+}
+a.login-user:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 9px;
+    height: 9px;
+    background: #52c83e;
+    border: 1px solid #FFF;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+.dropdown .dropdown-menu {
+    top: 100%!important;
+    max-height: 400px;
+    overflow: auto;
+}
+.dropdown .dropdown-menu {
+    -webkit-animation-name: slideUpIn;
+    animation-name: slideUpIn;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.dropdown .dropdown-menu.dropdown-menu-right{
+    right:0!important;
+    left:auto!important;
+}
+@-webkit-keyframes slideUpIn{
+    100%{-webkit-transform:translateY(0);transform:translateY(0)}
+    0%{-webkit-transform:translateY(40px);transform:translateY(40px)}
+}
+@keyframes slideUpIn{
+    100%{-webkit-transform:translateY(0);transform:translateY(0)}
+    0%{-webkit-transform:translateY(40px);transform:translateY(40px)}
+}
+/*=== Dropdown Media ===*/
+.dropdown .media {
+    min-width: 330px;
+    padding: 10px;
+    border-bottom: 1px solid #ebecee;
+}
+.dropdown .media:hover{
+    background-color: #f0f6ff;
+}
+.circle-img{
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.dropdown .media-body span {
+    display: table;
+    font-size: 11px;
+    color: #675b37;
+    background: #fff1c6;
+    padding: 0px 5px;
+}
+.dropdown .media img {
+    width: 40px;
+    border: 2px solid #FFF;
+    -webkit-box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
+    -moz-box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
+    box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
+}
+.dropdown .media-body p{ margin: 5px 0 0 }
