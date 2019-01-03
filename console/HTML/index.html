@@ -10,6 +10,7 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/dripicon.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
 </head>
@@ -31,7 +32,7 @@
 						<h1 class="brand-text">Console</h1>
 					</a>
 				</div><!-- Logo -->
-				<div class="sidemenu-opener"><a href="#" title=""><ion-icon name="list"></ion-icon></a></div>
+				<div class="sidemenu-opener"><a href="#" title=""><i class="icon dripicons-align-left"></i></a></div>
 				<div class="custom-header-links">
 					<ul class="nav">
 						<li class="nav-item dropdown">
@@ -66,11 +67,11 @@
 			<div class="header-right">
 				<ul class="top-header-btns">
 					<li class="dropdown">
-						<a href="#" title=""  data-toggle="dropdown"><i class="far fa-bell"></i></a>
-						<div class="dropdown-menu  dropdown-menu-right">
+						<a href="#" title="" data-toggle="dropdown"> <i class="far fa-comments"></i></a>
+						<div class="dropdown-menu  dropdown-menu-right theme-media">
 							<div class="dropdown-menu-header">
-								<h4>Notifications</h4>
-								<span>You have 2 unread notification</span>
+								<div class="dmh-inner"> <h4>Messages</h4> <span>You have 2 unread messages</span> </div>
+								<a class="settings-btn" href="#" title="">  <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon></a>
 							</div>
 							<div class="media unread">
 								<img class="mr-3 circle-img" src="images/img1.jpg" alt=" " />
@@ -96,26 +97,138 @@
 							    	<span>Mar 12 10:40pm</span><p><strong>Adrian Monino</strong> added new comment on your photo</p>
 							  	</div>
 							</div>
-
-
+							<div class="dropdown-menu-footer">
+								<a href="#" title="">See All Messages</a>
+							</div>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a href="#" title=""  data-toggle="dropdown"><i class="far fa-bell"></i> <span>2</span></a>
+						<div class="dropdown-menu  dropdown-menu-right">
+							<div class="dropdown-menu-header">
+								<div class="dmh-inner"> <h4>Notifications</h4> <span>You have 2 unread notifications</span> </div>
+								<a class="settings-btn" href="#" title="">  <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon></a>
+							</div>
+							<div class="timeline ">
+								<div class="timeline-list">
+									<div class="timeline-info"> <div class="d-inline-block">Server pending</div> <small class="float-right text-muted">Now</small> </div>
+								</div>
+								<div class="timeline-list  timeline-primary">
+									<div class="timeline-info"> <div class="d-inline-block">Delivery complete</div> <small class="float-right text-muted">10min.</small> </div>
+								</div>
+								<div class="timeline-list  timeline-accent">
+									<div class="timeline-info"> <div class="d-inline-block">Delivery processing</div> <small class="float-right text-muted">1hr.</small> </div>
+								</div>
+								<div class="timeline-list timeline-success">
+									<div class="timeline-info"> <div class="d-inline-block">Payment recorded</div> <small class="float-right text-muted">11:22am</small> </div>
+								</div>
+								<div class="timeline-list timeline-warning">
+									<div class="timeline-info"> <div class="d-inline-block">Order complete</div> <small class="float-right text-muted">9:30AM</small> </div>
+								</div>
+								<div class="timeline-list timeline-info">
+									<div class="timeline-info"> <div class="d-inline-block">Product quantities updated</div> <small class="float-right text-muted">9:27am</small> </div>
+								</div>
+								<div class="timeline-list timeline-info">
+									<div class="timeline-info"> <div class="d-inline-block">Ticket #627 Closed</div> <small class="float-right text-muted">8:02am</small> </div>
+								</div>
+								<div class="timeline-list timeline-info">
+									<div class="timeline-info"> <div class="d-inline-block">Cache cleared</div> <small class="float-right text-muted">6:00am</small> </div>
+								</div>
+							</div>
+							<div class="dropdown-menu-footer">
+								<a href="#" title="">See All Notifications</a>
+							</div>
+						</div>
+					</li>
+					<li class="dropdown">
+						<a class="login-user" data-toggle="dropdown" href="#" title=""> <img src="images/img1.jpg" alt="" /> </a>
+						<div class="dropdown-menu  dropdown-menu-right">
+							<a class="dropdown-item" href="#"> <ion-icon ios="ios-contact" md="md-contact"></ion-icon> Profile</a>
+							<a class="dropdown-item" href="#"> <ion-icon ios="ios-mail" md="md-mail"></ion-icon> Inbox</a>
+							<a class="dropdown-item" href="#">  <ion-icon ios="ios-aperture" md="md-aperture"></ion-icon> Settings</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">  <ion-icon ios="ios-log-out" md="md-log-out"></ion-icon> Logout</a>
 						</div>
 					</li>
 					<li>
-						<a href="#" title=""> <i class="far fa-comments"></i></a>
-					</li>
-					<li>
-						<a class="login-user" href="#" title=""> <img src="images/img1.jpg" alt="" /> </a>
+						<a href="#" title=""><i class="fas fa-align-right"></i> </a>
 					</li>
 				</ul>
 			</div><!-- Header Right -->
 		</header><!-- Header -->
+
+		<div class="theme-content">
+			<aside class="console-sidemenu sidebar-left">
+				<nav>
+					<ul class="console-menu">
+						<li class="sidebar-header"><span>NAVIGATION</span></li>
+						<li> <a href="#" title=""><i class="icon dripicons-meter"></i> <span>Dashboard</span></a>
+							<ul>
+								<li><a href="#" title="">Dashboard Style 1</a> </li>
+								<li><a href="#" title="">Dashboard Style 2</a>
+									<ul>
+										<li><a href="#" title="">Dashboard Style 1</a> </li>
+										<li><a href="#" title="">Dashboard Style 2</a> </li>
+										<li><a href="#" title="">Dashboard Style 3</a> </li>
+										<li><a href="#" title="">Dashboard Style 4</a> </li>
+									</ul>
+								</li>
+								<li><a href="#" title="">Dashboard Style 3</a> </li>
+								<li><a href="#" title="">Dashboard Style 4</a> </li>
+							</ul>
+						</li>
+						<li> <a href="#" title="">   <ion-icon ios="ios-albums" md="md-albums"></ion-icon> <span>Apps & Pages</span></a> </li>
+						<li> <a href="#" title=""> <i class="fas fa-code-branch"></i> <span>Custom Pages</span></a> </li>
+						<li> <a href="#" title=""> <i class="fas fa-address-card"></i> <span>Cards</span></a> </li>
+
+						<li class="sidebar-header"><span>UI ELEMENTS</span></li>
+						<li> <a href="#" title=""> <i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
+						<li> <a href="#" title="">   <ion-icon ios="ios-albums" md="md-albums"></ion-icon> <span>Page Layouts</span></a> </li>
+						<li> <a href="#" title=""> <i class="fas fa-code-branch"></i> <span>Custom Pages</span></a> </li>
+						<li> <a href="#" title=""> <i class="fas fa-address-card"></i> <span>Cards</span></a> </li>
+
+						<li class="sidebar-header"><span>APP VIEWS</span></li>
+						<li> <a href="#" title=""> <i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
+						<li> <a href="#" title="">   <ion-icon ios="ios-albums" md="md-albums"></ion-icon> <span>Page Layouts</span></a> </li>
+						<li> <a href="#" title=""> <i class="fas fa-code-branch"></i> <span>Custom Pages</span></a> </li>
+						<li> <a href="#" title=""> <i class="fas fa-address-card"></i> <span>Cards</span></a> </li>
+
+						<li class="sidebar-header"><span>EXTRAS</span></li>
+						<li> <a href="#" title=""> <i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
+						<li> <a href="#" title="">   <ion-icon ios="ios-albums" md="md-albums"></ion-icon> <span>Page Layouts</span></a> </li>
+						<li> <a href="#" title=""> <i class="fas fa-code-branch"></i> <span>Custom Pages</span></a> </li>
+						<li> <a href="#" title=""> <i class="fas fa-address-card"></i> <span>Cards</span></a> </li>
+
+					</ul>
+				</nav>
+			</aside><!-- Console Sidemenu -->
+
+			<div class="content-area">
+				<div class="row">
+					<div class="col-xl-7 col-xxl-9">
+						<div class="card">
+							<h5 class="card-header">
+								Monthly budget
+							</h5>
+							<div class="card-body">
+								<div id="monthly-budget">
+									<div id="monthly-budget-content" style="height: 350px; padding: 0px; position: relative;"><canvas class="flot-base" width="1072" height="350" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1072.25px; height: 350px;"></canvas><canvas class="flot-overlay" width="1072" height="350" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1072.25px; height: 350px;"></canvas><div class="legend"><div style="position: absolute; width: 82px; height: 42px; top: 17px; right: 23px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:17px;right:23px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(246,74,145);overflow:hidden"></div></div></td><td class="legendLabel">Expenses</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(116,104,189);overflow:hidden"></div></div></td><td class="legendLabel">Income</td></tr></tbody></table></div></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- Content Area -->
+		</div><!-- Theme Content -->
+
 	</div><!-- Theme Wrapper -->
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
+<script src="js/script.js"></script>
 
 
 </body>
