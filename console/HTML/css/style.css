@@ -123,7 +123,8 @@ body.theme-body p {
 }
 /*=============== Cross Browser Compatibility ===================*/
 a,
-.dropdown .media{
+.dropdown .media,
+.timeline .timeline-list{
     -webkit-transition:all 0.2s ease-in-out;
     -moz-transition:all 0.2s ease-in-out;
     -ms-transition:all 0.2s ease-in-out;
@@ -144,6 +145,7 @@ header {
     align-items: center;
     height: 55px;
     padding: 0 20px;
+    position: relative;
     background: #FFF;
     justify-content: space-between;
     -webkit-box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
@@ -151,9 +153,10 @@ header {
     box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
 }
 .theme-wrapper{height: 100vh}
-.sidemenu-opener {
+.sidemenu-opener a{
     width: 30px;
     height: 30px;
+    float:left;
     line-height: 34px;
     text-align: center;
     font-size: 18px;
@@ -205,7 +208,13 @@ h1.brand-text {
 /*=== Dropdown ===*/
 .dropdown a.dropdown-item {
     font-size: 13px;
+    display: flex;
     color: #a4b1be;
+    align-items: center;
+}
+.dropdown a.dropdown-item i, .dropdown a.dropdown-item ion-icon {
+    margin-right: 10px;
+    font-size: 16px;
 }
 ul.top-header-btns{ list-style: none }
 ul.top-header-btns > li { float: left }
@@ -221,7 +230,8 @@ ul.top-header-btns > li > a {
     -moz-border-radius: 50%;
     border-radius: 50%;
 }
-ul.top-header-btns > li > a:hover{ background:#f0f6ff}
+ul.top-header-btns > li > a:hover,
+ul.top-header-btns > li.show > a{ background:#f0f6ff}
 ul.top-header-btns > li ~ li{ margin-left: 10px }
 ul.top-header-btns > li > a.login-user img {
     -webkit-border-radius: 50%;
@@ -251,7 +261,7 @@ a.login-user:before {
 }
 .dropdown .dropdown-menu {
     top: 100%!important;
-    max-height: 400px;
+    max-height: 500px;
     overflow: auto;
 }
 .dropdown .dropdown-menu {
@@ -275,12 +285,13 @@ a.login-user:before {
     0%{-webkit-transform:translateY(40px);transform:translateY(40px)}
 }
 /*=== Dropdown Media ===*/
-.dropdown .media {
+.theme-media .media{
     min-width: 330px;
     padding: 10px;
     border-bottom: 1px solid #ebecee;
 }
-.dropdown .media:hover{
+.theme-media .media:last-child{ border-bottom:0 }
+.theme-media .media:hover{
     background-color: #f0f6ff;
 }
 .circle-img{
@@ -288,18 +299,217 @@ a.login-user:before {
     -moz-border-radius:50%;
     border-radius:50%;
 }
-.dropdown .media-body span {
+.theme-media .media-body span {
     display: table;
     font-size: 11px;
     color: #675b37;
     background: #fff1c6;
     padding: 0px 5px;
 }
-.dropdown .media img {
+.theme-media .media img {
     width: 40px;
     border: 2px solid #FFF;
     -webkit-box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
     -moz-box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
     box-shadow: 0px 0px 10px rgba(18,106,211,0.5);
 }
-.dropdown .media-body p{ margin: 5px 0 0 }
+.theme-media .media-body p{
+    margin: 5px 0 0;
+    font-size:12px;
+}
+.dropdown-menu-header {
+    background: #fffdf6;
+    margin: -.5rem 0 10px;
+    border-bottom: 1px solid #d2def0;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.dropdown-menu-header h4 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.4;
+    color:#584d29;
+}
+.dropdown-menu-header span {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #7a7b7e;
+    display: table;
+}
+.dropdown-menu-footer {
+    background: #fffdf6;
+    margin: -1px 0 -.5rem;
+    border-top: 1px solid #d2def0;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #7c7d81;
+    display: flex;
+    justify-content: center;
+}
+.dropdown-menu-footer a{width:100%}
+a.settings-btn {
+    font-size: 23px;
+    color: #617182;
+    line-height: 1;
+    display: table;
+}
+/* === Timeline === */
+.timeline-border{ border-left: 1px solid #e5ebf8}
+.timeline, .timeline .timeline-list{
+    position: relative;
+    border-color: #e5ebf8;
+}
+.timeline .timeline-list {
+    padding-bottom: 1px;
+    margin: 0 0 5px;
+}
+.timeline .timeline-list:hover{ background: #f0f6ff }
+.timeline .timeline-list:before{
+    display: table;
+    content: " ";
+}
+.timeline .timeline-list .timeline-info {
+    font-size: 12px;
+    margin:0;
+    padding: 5px 15px 5px 35px;
+}
+.d-inline-block {
+    display: inline-block!important;
+}
+.timeline .timeline-list:after {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 7px;
+    height: 7px;
+    content: "";
+    border-width: 2px;
+    border-style: solid;
+    border-color: inherit;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.timeline-list.timeline-border{ margin-left: -1px }
+.timeline {
+    margin: 10px 0;
+    min-width: 300px;
+}
+.timeline-primary{border-color:#736cc7!important}
+.timeline-accent{border-color:#F64A91!important}
+.timeline-success{border-color:#2fbfa0!important}
+.timeline-warning{border-color:#FFCE67!important}
+.timeline-info{border-color:#399AF2!important}
+.timeline-danger{border-color:#ff5c75!important}
+.timeline .timeline-list:Last-child .timeline-info {
+    margin-bottom: 0;
+}
+ul.top-header-btns > li > a span {
+    position: absolute;
+    right: 1px;
+    top: 7px;
+    width: 15px;
+    height: 15px;
+    background: #ff8282;
+    color: #FFF;
+    font-size: 10px;
+    line-height: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 0 11px rgba(255, 109, 109, 0.55);
+    -moz-box-shadow: 0 0 11px rgba(255, 109, 109, 0.55);
+    box-shadow: 0 0 11px rgba(255, 109, 109, 0.55);
+}
+/*=============== Theme Content ===================*/
+.theme-content {
+    display: flex;
+    height:100%;
+    /* height:calc(100vh - 55px); For Fixed Sidemenu And Topmenu */
+}
+/*=============== Sidemenu ===================*/
+aside.console-sidemenu {
+    flex: 0 0 250px;
+    margin-left: -250px;
+    background: #fff;
+    order: 1;
+    -webkit-box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
+    -moz-box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
+    box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
+    -webkit-transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -moz-transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -o-transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition: all 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
+aside.console-sidemenu.active{ margin-left:0 }
+ul.console-menu {
+    list-style: none;
+    margin-top: 20px;
+}
+.console-sidemenu nav li{
+    margin: 0 0 .55rem;
+    padding:0 1.25rem;
+}
+.console-sidemenu nav li.sidebar-header {
+    padding: .825rem 1.25rem .625rem 1.25rem;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    margin: 0;
+    color: #a1b8d0;
+    border-top: 1px solid #ececec;
+}
+/* .console-sidemenu nav li.sidebar-header span {
+    background: #fceec3;
+    color: #9a8d67;
+    padding: 1px 10px 1px 10px;
+    -webkit-box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
+    -moz-box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
+    box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
+} */
+.console-sidemenu nav li a {
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0;
+    width: 100%;
+    font-weight: 300;
+    color: #667181;
+}
+.console-sidemenu nav li a i, .console-sidemenu nav li a ion-icon {
+    margin-right: 10px;
+    font-size: 15px;
+    width: 20px;
+}
+.console-sidemenu nav li a span{font-size: 13px;}
+.console-sidemenu nav li ul {
+    list-style: none;
+    margin: 0px 0 20px 5px;
+    display:none;
+    background: linear-gradient(to right, rgb(255, 253, 246), #FFF  );
+    padding: 15px 0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.05);
+}
+.console-sidemenu nav li.sidebar-header:first-child{ border: 0 }
+.console-sidemenu nav li ul li {
+    margin: 0 0 5px 0;
+    font-size: 11px;
+}
+.console-sidemenu nav li ul li:last-child{ margin: 0 }
+.console-sidemenu nav li ul li a {font-weight: 400;}
+/*=============== Content Area ===================*/
+.content-area {
+    flex: auto;
+    padding: 20px;
+    order: 2;
+}
