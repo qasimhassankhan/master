@@ -124,7 +124,8 @@ body.theme-body p {
 /*=============== Cross Browser Compatibility ===================*/
 a,
 .dropdown .media,
-.timeline .timeline-list{
+.timeline .timeline-list,
+.console-sidemenu nav > ul li.menu-item-has-children:before {
     -webkit-transition:all 0.2s ease-in-out;
     -moz-transition:all 0.2s ease-in-out;
     -ms-transition:all 0.2s ease-in-out;
@@ -152,7 +153,7 @@ header {
     -moz-box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
     box-shadow: 0 1px 1px 1px rgba(18,106,211,.08);
 }
-.theme-wrapper{height: 100vh}
+.theme-wrapper{min-height: 100vh;}
 .sidemenu-opener a{
     width: 30px;
     height: 30px;
@@ -426,7 +427,7 @@ ul.top-header-btns > li > a span {
 /*=============== Theme Content ===================*/
 .theme-content {
     display: flex;
-    height:100%;
+    min-height: calc(100vh - 55px);
     /* height:calc(100vh - 55px); For Fixed Sidemenu And Topmenu */
 }
 /*=============== Sidemenu ===================*/
@@ -453,15 +454,17 @@ ul.console-menu {
     list-style: none;
     margin-top: 20px;
 }
-.console-sidemenu nav li{
+.console-sidemenu nav li {
     margin: 0 0 .55rem;
-    padding:0 1.25rem;
+    padding: 0 1.25rem;
+    transition: all 0.3s;
+    position: relative;
 }
 .console-sidemenu nav li.sidebar-header {
     padding: .825rem 1.25rem .625rem 1.25rem;
     font-size: 0.6875rem;
     text-transform: uppercase;
-    margin: 0;
+    margin:20px 0 0 ;
     color: #a1b8d0;
     border-top: 1px solid #ececec;
 }
@@ -489,16 +492,9 @@ ul.console-menu {
 .console-sidemenu nav li a span{font-size: 13px;}
 .console-sidemenu nav li ul {
     list-style: none;
-    margin: 0px 0 20px 5px;
+    margin: 0px -20px 20px -20px;
     display:none;
-    background: linear-gradient(to right, rgb(255, 253, 246), #FFF  );
-    padding: 15px 0;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    -webkit-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.05);
-    -moz-box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.05);
-    box-shadow: -3px 0px 5px 0px rgba(0, 0, 0, 0.05);
+    padding: 15px 0 15px 30px;
 }
 .console-sidemenu nav li.sidebar-header:first-child{ border: 0 }
 .console-sidemenu nav li ul li {
@@ -507,6 +503,22 @@ ul.console-menu {
 }
 .console-sidemenu nav li ul li:last-child{ margin: 0 }
 .console-sidemenu nav li ul li a {font-weight: 400;}
+.console-sidemenu nav li ul li ul {border: 0;padding-left: 0;margin: 0 -20px 0 0px;padding: 10px 0;}
+.console-sidemenu nav > ul >li.menu-item-has-children.active {
+    border-right: 3px solid #5d8bd0;
+    background: rgb(240, 246, 255);
+    padding-top: 10px;
+}
+.console-sidemenu nav > ul > li{ border-left: 3px solid transparent }
+.console-sidemenu nav > ul li.menu-item-has-children:before {
+    content: "T";
+    position: absolute;
+    right: 20px;
+    top: 7px;
+    font-family: "dripicons-v2" !important;
+}
+.console-sidemenu nav > ul ul li.menu-item-has-children:before{ top: 3px!important }
+.console-sidemenu nav > ul li.menu-item-has-children.active:before{ top: 15px }
 /*=============== Content Area ===================*/
 .content-area {
     flex: auto;
