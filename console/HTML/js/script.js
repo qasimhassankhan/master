@@ -5,8 +5,8 @@ $(window).on("load", function(){
     $("body").on("click", ".sidemenu-opener", function(){
         $(".console-sidemenu").toggleClass('active');
     });
+
     // Sidemenu Dropdown
-    /*================== Octa Sidemenu Dropdown =====================*/
     $(".console-sidemenu ul ul").parent().addClass("menu-item-has-children");
     $(".console-sidemenu ul li.menu-item-has-children > a").on("click", function() {
         $(this).parent().toggleClass("active").siblings().removeClass("active");
@@ -14,5 +14,36 @@ $(window).on("load", function(){
         $(this).parent().siblings().find("ul").slideUp();
         return false;
     });
+
+
+
+    // ========== More Option Panel Functions ============ //
+    // Open & Close
+    $("body").on("click", ".more-opt-open", function(){
+        $(".more-opt-panel").toggleClass('active');
+    });
+
+
+    // ========== Grid Stack Initialization ============ //
+    var options = {
+        cellHeight:5,
+        verticalMargin: 10,
+        float:true
+    };
+    $('.grid-stack').gridstack(options);
+
+
+    // ========== Piety ============ //
+    $.fn.peity.defaults.bar = {
+    delimiter: ",",
+    fill: ["#5d8bd0"],
+    height:32,
+    max: null,
+    min: 0,
+    padding: 0.1,
+    width: 60
+    }    
+    $(".piety-bar").peity("bar")
+
 
 })
