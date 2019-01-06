@@ -10,6 +10,8 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/gridstack.js/0.4.0/gridstack.min.css" />
+
 	<link rel="stylesheet" type="text/css" href="css/dripicon.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/responsive.css" />
@@ -65,9 +67,13 @@
 				</div><!-- Custom Header Links -->
 			</div><!-- Header Left -->
 			<div class="header-right">
+				<form class="console-search">
+					<button><i class="icon dripicons-search"></i></button>
+					<input type="text" placeholder="Search..." />
+				</form>
 				<ul class="top-header-btns">
 					<li class="dropdown">
-						<a href="#" title="" data-toggle="dropdown"> <i class="far fa-comments"></i></a>
+						<a href="#" title="" data-toggle="dropdown"> <i class="icon dripicons-message"></i></a>
 						<div class="dropdown-menu  dropdown-menu-right theme-media">
 							<div class="dropdown-menu-header">
 								<div class="dmh-inner"> <h4>Messages</h4> <span>You have 2 unread messages</span> </div>
@@ -103,7 +109,7 @@
 						</div>
 					</li>
 					<li class="dropdown">
-						<a href="#" title=""  data-toggle="dropdown"><i class="far fa-bell"></i> <span>2</span></a>
+						<a href="#" title=""  data-toggle="dropdown"><i class="icon dripicons-bell"></i> <span>2</span></a>
 						<div class="dropdown-menu  dropdown-menu-right">
 							<div class="dropdown-menu-header">
 								<div class="dmh-inner"> <h4>Notifications</h4> <span>You have 2 unread notifications</span> </div>
@@ -151,15 +157,22 @@
 						</div>
 					</li>
 					<li>
-						<a href="#" title=""><i class="fas fa-align-right"></i> </a>
+						<a class="more-opt-open" href="#" title=""><i class="icon dripicons-align-right"></i> </a>
 					</li>
 				</ul>
 			</div><!-- Header Right -->
 		</header><!-- Header -->
 
 		<div class="theme-content">
-			<aside class="console-sidemenu sidebar-left">
+			<aside class="console-sidemenu active">
 				<nav>
+					<div class="user logged-in">
+						<a class="login-user" href="#" title=""><img src="images/img1.jpg" alt="" /></a>
+						<div class="user-detail">
+							<strong>Joyce Cabardo</strong>
+							<i>support@joyce.com</i>
+						</div>
+					</div>
 					<ul class="console-menu">
 						<li class="sidebar-header"><span>NAVIGATION</span></li>
 						<li> <a href="#" title=""><i class="icon dripicons-meter"></i> <span>Dashboard</span></a>
@@ -204,31 +217,167 @@
 			</aside><!-- Console Sidemenu -->
 
 			<div class="content-area">
-				<div class="row">
-					<div class="col-xl-7 col-xxl-9">
-						<div class="card">
-							<h5 class="card-header">
-								Monthly budget
-							</h5>
-							<div class="card-body">
-								<div id="monthly-budget">
-									<div id="monthly-budget-content" style="height: 350px; padding: 0px; position: relative;"><canvas class="flot-base" width="1072" height="350" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1072.25px; height: 350px;"></canvas><canvas class="flot-overlay" width="1072" height="350" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1072.25px; height: 350px;"></canvas><div class="legend"><div style="position: absolute; width: 82px; height: 42px; top: 17px; right: 23px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:17px;right:23px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(246,74,145);overflow:hidden"></div></div></td><td class="legendLabel">Expenses</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(116,104,189);overflow:hidden"></div></div></td><td class="legendLabel">Income</td></tr></tbody></table></div></div>
-								</div>
-							</div>
+				<div class="console-dashboard-title">
+					<div>
+						<h1>Hi <strong>Joyce</strong>! Welcome</h1>
+						<span>Your web analytics dashboard template.</span>
+					</div>
+					<div class="dashboard-title-more">
+						<div class="dash-info-block">
+							<div class="dash-info"><strong>Start Date</strong> <i>January 1st, 2019</i></div>
+							<div class="dash-info"><strong>End Date</strong> <i>January 15, 2019</i></div>
+							<div class="dash-info"><strong>Project</strong> <i>Project Management</i></div>
 						</div>
+						<a class="theme-btn" href="#" title=""><i class="icon dripicons-export"></i> Export</a>
 					</div>
 				</div>
+
+				<div class="grid-stack gs-area">
+					<div class="grid-stack-item"data-gs-x="0" data-gs-y="0" data-gs-width="2" data-gs-height="11">
+						<div class="console-panel grid-stack-item-content">
+							<div class="console-panel-body">
+								<div class="console-stats">
+									<h5>TOTAL INCOME</h5>
+									<span class="piety-bar">7,5,9,10,1,4,4,7,5,10,4,4</span>
+									<div class="stats-num">13,956 </div>
+									<i>18.2% higher vs previous month</i>
+								</div>
+							</div>
+						</div><!-- Console Panel -->
+					</div>
+
+
+					<div class="grid-stack-item"data-gs-x="2" data-gs-y="0" data-gs-width="2" data-gs-height="11">
+						<div class="console-panel grid-stack-item-content">
+							<div class="console-panel-body">
+								<div class="console-stats">
+									<h5>TOTAL INCOME</h5>
+									<span class="piety-bar">7,5,9,10,1,4,4,7,5,10,4,4</span>
+									<div class="stats-num">13,956 </div>
+									<i>18.2% higher vs previous month</i>
+								</div>
+							</div>
+						</div><!-- Console Panel -->
+					</div>
+
+					<div class="grid-stack-item"data-gs-x="4" data-gs-y="0" data-gs-width="2" data-gs-height="11">
+						<div class="console-panel grid-stack-item-content">
+							<div class="console-panel-body">
+								<div class="console-stats">
+									<h5>TOTAL INCOME</h5>
+									<span class="piety-bar">7,5,9,10,1,4,4,7,5,10,4,4</span>
+									<div class="stats-num">13,956 </div>
+									<i>18.2% higher vs previous month</i>
+								</div>
+							</div>
+						</div><!-- Console Panel -->
+					</div>
+
+					<div class="grid-stack-item"data-gs-x="6" data-gs-y="0" data-gs-width="2" data-gs-height="11">
+						<div class="console-panel grid-stack-item-content">
+							<div class="console-panel-body">
+								<div class="console-stats">
+									<h5>TOTAL INCOME</h5>
+									<span class="piety-bar">7,5,9,10,1,4,4,7,5,10,4,4</span>
+									<div class="stats-num">13,956 </div>
+									<i>18.2% higher vs previous month</i>
+								</div>
+							</div>
+						</div><!-- Console Panel -->
+					</div>
+
+					<div class="grid-stack-item"data-gs-x="8" data-gs-y="0" data-gs-width="4" data-gs-height="11">
+						<div class="console-panel grid-stack-item-content">
+							<div class="console-panel-body">
+								<div class="console-stats">
+									<h5>TOTAL INCOME</h5>
+									<span class="piety-bar">7,5,9,10,1,4,4,7,5,10,4,4</span>
+									<div class="stats-num">13,956 </div>
+									<i>18.2% higher vs previous month</i>
+								</div>
+							</div>
+						</div><!-- Console Panel -->
+					</div>
+
+					<div class="grid-stack-item"data-gs-x="0" data-gs-y="11" data-gs-width="6" data-gs-height="40">
+						<div class="console-panel grid-stack-item-content">
+							<div class="console-panel-header">
+								<div class="cph-left">
+									<h5>Monthly Budget</h5>		
+									<span>This report is based on 100% of sessions.</span>
+								</div>
+								<div class="cph-right">
+									<ul class="top-header-btns">
+										<li class="dropdown">
+											<a href="#" title="" data-toggle="dropdown"> <i class="icon dripicons-dots-3"></i></a>
+											<div class="dropdown-menu  dropdown-menu-right theme-media">
+												<div class="dropdown-menu-header"> <div class="dmh-inner"> <h4>Panel Options</h4> </div> </div>
+												<a class="dropdown-item" href="#" title="">Resize Panel</a>
+												<a class="dropdown-item" href="#" title="">Change Color</a>
+												<a class="dropdown-item" href="#" title="">Full Screen</a>
+											</div>
+										</li>
+									</ul>
+								</div>	
+							</div>
+							<div class="console-panel-body">
+								<div style="width:100%;height:400px"></div>
+							</div>
+						</div><!-- Console Panel -->
+					</div>
+
+					<div class="grid-stack-item"data-gs-x="6" data-gs-y="11" data-gs-width="6" data-gs-height="40">
+						<div class="console-panel grid-stack-item-content">
+							<div class="console-panel-header">
+								<div class="cph-left">
+									<h5>Monthly Budget</h5>		
+									<span>This report is based on 100% of sessions.</span>
+								</div>
+								<div class="cph-right">
+									<ul class="top-header-btns">
+										<li class="dropdown">
+											<a href="#" title="" data-toggle="dropdown"> <i class="icon dripicons-dots-3"></i></a>
+											<div class="dropdown-menu  dropdown-menu-right theme-media">
+												<div class="dropdown-menu-header"> <div class="dmh-inner"> <h4>Panel Options</h4> </div> </div>
+												<a class="dropdown-item" href="#" title="">Resize Panel</a>
+												<a class="dropdown-item" href="#" title="">Change Color</a>
+												<a class="dropdown-item" href="#" title="">Full Screen</a>
+											</div>
+										</li>
+									</ul>
+								</div>	
+							</div>
+							<div class="console-panel-body">
+								<div style="width:100%;height:400px"></div>
+							</div>
+						</div><!-- Console Panel -->
+					</div>
+
+				</div>
 			</div><!-- Content Area -->
+
+			<aside class="more-opt-panel">
+
+			</aside>
 		</div><!-- Theme Content -->
 
 	</div><!-- Theme Wrapper -->
 
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
-<script src="js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+	<script src='http://gridstackjs.com/dist/gridstack.js'></script>
+	<script src='http://gridstackjs.com/dist/gridstack.jQueryUI.js'></script>
+
+	<script src="http://benpickles.github.io/peity/jquery.peity.min.js"></script>
+
+	<script src="js/script.js"></script>
 
 
 </body>
