@@ -26,24 +26,28 @@ $(window).on("load", function(){
 
     // ========== Grid Stack Initialization ============ //
     var options = {
-        cellHeight:5,
-        verticalMargin: 10,
-        float:true
+      float: true,
+      cellHeight: 10,
+      animate:true,
+      width:12,
+      verticalMargin: 20,
+
     };
     $('.grid-stack').gridstack(options);
 
 
     // ========== Piety ============ //
     $.fn.peity.defaults.bar = {
-    delimiter: ",",
-    fill: ["#5d8bd0"],
-    height:32,
-    max: null,
-    min: 0,
-    padding: 0.1,
-    width: 60
-    }    
+        delimiter: ",",
+        fill: ["#5d8bd0"],
+        height:32,
+        max: null,
+        min: 0,
+        padding: 0.1,
+        width: 60
+    }
     $(".piety-bar").peity("bar")
 
+    $('.sparklines').sparkline('html', { enableTagOptions: true });
 
 })
