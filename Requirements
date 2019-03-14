@@ -1,3 +1,7 @@
+
+getHeadings.push(`{ "caption": "ACTIONS",  "width": 150 , "cellTemplate": "<div class='action'><select class='select'><option>Select</option><option>Assign</option><option>Not Assign</option><option>Reject</option></select><input type='text' value='' style='width:40px;padding:3px' /><a class='td-icon' href='#' title=''><i class='fa fa-save'></i></a></div>" }`);
+
+
 I need instant changes. How can I keep on doing it on Skype?
 I told you I am not available next 2 days too.
 You must take leave from the office and spend tomorrow in our office. I can't be more uncertain about the pending work.
