@@ -2314,7 +2314,7 @@ label:hover:before {
 }
 .widget-body {
     position: relative;
-    overflow: auto;
+
     max-width: 100%;
 }
 .dev-icons.active {
