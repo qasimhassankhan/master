@@ -11,7 +11,7 @@ table.custom-table td {
 
 .login-form{ width: 970px }
 .login-left{ padding: 20px 40px }
-a.custom-btn.style2,a.custom-btn.style3{ min-width: 140px; padding: 12px 20px }
+.custom-btn.style2,.custom-btn.style3{ min-width: 140px; padding: 12px 20px }
 }
 
 @media (max-width:980px){
@@ -20,7 +20,6 @@ a.custom-btn.style2,a.custom-btn.style3{ min-width: 140px; padding: 12px 20px }
     position: relative;
     float: left;
     width: 100%;
-    display: unset;
 }
 .sidemenu {
     position: absolute;
@@ -52,6 +51,10 @@ p.login-note { margin: 40px 0 0}
 .action-btn ~ .action-btn {margin-left: 0}
 .action-buttons {margin: 0}
 .action-btn a {border-radius: 0}
+.collapse-panel-btn {
+    right: 0px;
+    bottom: 0;
+}
 }
 
 
@@ -97,7 +100,6 @@ div#DataTables_Table_0_length {margin: 0 0 10px}
     text-align: center;
     display: inline-block;
     padding: 15px 10px;
-    width:100%;
 }
 
 .bottom-bar span {
@@ -118,6 +120,10 @@ div#DataTables_Table_0_length {margin: 0 0 10px}
 .logo a{flex: auto}
 .logo a.responsive-menu-btn {font-size: 20px;flex: 0 0 50px;color: #dedede;margin-right: -50px;align-self: center;z-index:100;}
 .login-right, .dev_search { display: none;}
+.sidemenu-btn{display: none}
+.widget-options {
+    margin: 0 0 0 auto;
+}
 }
 @media (max-width:480px){
 .login-left { padding: 20px }
